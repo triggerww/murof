@@ -3,12 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Uma comunidade para quem gosta de criar, aprender e trocar ideias.">
+    <meta name="keywords" content="Murof, comunidade, discord, forum, servidor,New Murof Republic, arte, desenho, programação">
     <title>Murof</title>
     <link rel="stylesheet" href="css/index.css">
     <link rel="shortcut icon" href="images/icon_mokhat.png" type="image/png">
+    <meta property="og:title" content="Murof.org">
+    <meta property="og:description" content="Uma comunidade para quem gosta de criar, aprender e trocar ideias.">
+    <meta property="og:url" content="https://murof.me/">
+    <meta property="og:image" content="./images/murof.png">
+    <meta property="og:type" content="website">
 </head>
 <body>
-    <header class="intro">
+    <header class="menu">
         <div class="logotexto">
             <h1>Murof</h1>
         </div>
@@ -16,19 +23,68 @@
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Wiki</a></li>
                 <li><a href="#">Artes</a></li>
+                <li><a href="#">Projetos</a></li>
                 <li><a href="#">Apoiadores</a></li>
             </ul>
         </nav>
 
-            <a href="https://discord.gg/MWrYrytMCg" target="_blank" class="btn-discord" >
-                <img src="images/discord.png" alt="Nosso discord!">
-            </a>
+        <div class="server-status-widget" id="serverStatusWidget">
+            <span class="server-status-dot" id="serverStatusDot"></span>
+            <span id="serverAddress"></span>
+        </div>
     </header>
+
+    <main>
+        <article>
+            <section class="0x4E4D52">
+                <header>
+                    <h3>Olá viajante!</h3>
+                </header>
+                <p>
+                    Unimos entusiastas e profissionais de programação, tecnologia, jogos e arte em um ambiente feito para a troca de conhecimento e boas conexões. Faça parte!
+                </p>
+
+                <div class="redes-sociais">
+                    <a href="https://discord.gg/MWrYrytMCg">
+                        <img src="images/discord.png" alt="Nosso Discord!">
+                    </a>
+                </div>
+            </section>
+
+            <section class="cards">
+                <div class="content-cards">
+                    <img src="images/icon_user/6321f16d3c7dbeba8e0975a3929b1b20.png" class="icon-user" alt="Trigger">
+                    <header>
+                        <h3>Trigger</h3>
+                    </header>
+                    <p>
+                        Acesse nosso source no Github!<br/>
+                        E tenha acesso a nossos wallpapers e miscelâneas...
+                        <a href="https://github.com/triggerww/murof" target="_blank" class="link">Aqui.</a>
+                    </p>
+                </div>
+
+                <div class="content-cards">
+                    <img src="images/icon_user/24d834316d889fb31dd8a393f3df3e2e.png" class="icon-user" alt="Trigger">
+                    <header>
+                        <h3>Snuf</h3>
+                    </header>
+                    <p>
+                        And now, this is what we've got...<br>
+                        __Last edited by The_CrazyBunny on Sat Nov 20th 2011 at 11am; 10 posted__
+                        <a href="https://github.com/triggerww/murof" target="_blank" class="link">Aqui.</a>
+                    </p>
+                </div>
+                
+            </section>
+        </article>
+    </main>
 
     <footer>
         <div class="widget">Os vulcões oferecem um vislumbre do interior da Terra, mostrando poderosas forças geológicas por meio de erupções.</div>
     </footer>
+
+    <script src="js/server-status.js"></script>
 </body>
 </html>
