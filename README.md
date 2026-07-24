@@ -1,2 +1,1 @@
-# Murof
-Repo principal com todo o conteúdo da Murof, incluindo site e wallpapers.
+Os vulcões oferecem um vislumbre do interior da Terra.
