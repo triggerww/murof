@@ -97,3 +97,35 @@ nav ul li:hover {
     height: 30px;
 } 
 
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    min-height: 40px;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: rgba(21, 21, 21, 0.95);
+    border-top: 1px solid var(--contorno);
+}
+
+.widget {
+    position: relative;
+    width: 100%;
+    white-space: nowrap;
+    font-size: 0.95rem;
+    color: var(--font);
+    transform: translateX(100%);
+    animation: scroll 35s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
