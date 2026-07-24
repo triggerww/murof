@@ -30,6 +30,12 @@ body {
     color: var(--font);
     font-size: 17px;
     font-family: Hack, monospace;
+    background-image: url('../images/background.webp');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .intro {
@@ -89,4 +95,5 @@ nav ul li:hover {
 .btn-discord img {
     width: 30px;
     height: 30px;
-}
+} 
+
