@@ -1,5 +1,32 @@
 const SERVER_ADDRESS = "mc.murof.me";
-const STATUS_ENDPOINT = `https://api.mcsrvstat.us/3/${SERVER_ADDRESS}`;
+const STATUS_ENDPOINTS = [
+	`https://api.mcstatus.io/v2/status/java/${SERVER_ADDRESS}`,
+	`https://api.mcsrvstat.us/3/${SERVER_ADDRESS}`,
+];
+
+async function fetchServerStatus() {
+	let lastError = null;
+
+	for (const endpoint of STATUS_ENDPOINTS) {
+		try {
+			const response = await fetch(endpoint, {
+				cache: "no-store",
+			});
+
+			if (!response.ok) {
+				throw new Error(`HTTP ${response.status}`);
+			}
+
+			const data = await response.json();
+			return data;
+		} catch (error) {
+			lastError = error;
+			console.warn(`Falha ao consultar ${endpoint}:`, error);
+		}
+	}
+
+	throw lastError ?? new Error("Nenhum endpoint de status respondeu.");
+}
 
 async function checkServerStatus() {
 	const statusDot = document.getElementById("serverStatusDot");
@@ -15,20 +42,12 @@ async function checkServerStatus() {
 	widget.title = SERVER_ADDRESS;
 
 	try {
-		const response = await fetch(STATUS_ENDPOINT, {
-			cache: "no-store",
-		});
-
-		if (!response.ok) {
-			throw new Error(`HTTP ${response.status}`);
-		}
-
-		const data = await response.json();
+		const data = await fetchServerStatus();
 		const online = Boolean(data.online);
 
 		statusDot.classList.add(online ? "online" : "offline");
 		serverAddress.textContent = SERVER_ADDRESS;
-		widget.title = SERVER_ADDRESS;
+		widget.title = online ? `${SERVER_ADDRESS} (online)` : `${SERVER_ADDRESS} (offline)`;
 	} catch (error) {
 		statusDot.classList.add("offline");
 		serverAddress.textContent = SERVER_ADDRESS;
