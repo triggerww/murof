@@ -1,4 +1,4 @@
-const SERVER_ADDRESS = "Murof.aternos.me:33788";
+const SERVER_ADDRESS = "mc.murof.me";
 const STATUS_ENDPOINT = `https://api.mcsrvstat.us/3/${SERVER_ADDRESS}`;
 
 async function checkServerStatus() {
