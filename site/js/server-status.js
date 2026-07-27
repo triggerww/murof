@@ -7,7 +7,7 @@ async function status() {
 
 		document.getElementById('server-address').innerText = data.host;
 		
-		if(data.online === 'true') {
+		if(data.online === true) {
 			document.getElementById('server-dot').classList.add('online');
 		} else {
 			document.getElementById('server-dot').classList.add('offline');
