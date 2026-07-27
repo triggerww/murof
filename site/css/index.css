@@ -221,7 +221,7 @@ footer {
     }
 }
 
-.server-status-widget {
+.server-widget {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -230,18 +230,18 @@ footer {
     line-height: 1;
 }
 
-.server-status-dot {
+#server-dot {
     width: 10px;
     height: 10px;
     border-radius: 50%;
     display: block;
 }
-.server-status-dot.online {
+#server-dot.online {
     background: #2ecc71;
     box-shadow: 0 0 0 4px rgba(46, 204, 113, 0.15);
 }
 
-.server-status-dot.offline {
+#server-dot.offline {
     background: #ff3b30;
     box-shadow: 0 0 0 4px rgba(255, 59, 48, 0.15);
 }
