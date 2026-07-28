@@ -2,7 +2,7 @@ Repositório para guardar o código-fonte dos projetos do servidor, além de wal
 
 **Site:** https://murof.me/
 
-**Discord:** [https://discord.gg/MWrYrytMCg](https://discord.gg/MWrYrytMCg)
+**Discord:** https://discord.gg/MWrYrytMCg
 
 **Licença do código:** O código deste repositório está sob a GPLv3, conforme descrito no arquivo [LICENSE](LICENSE).
 
