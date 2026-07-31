@@ -7,10 +7,10 @@ async function status() {
 
 		document.getElementById('server-address').innerText = data.host;
 		
-		if(data.online === true) {
-			document.getElementById('server-dot').classList.add('online');
-		} else {
+		if(data.online === false || data.name_raw === '§c● Offline') {
 			document.getElementById('server-dot').classList.add('offline');
+		} else {
+			document.getElementById('server-dot').classList.add('online');
 		}
 
 	} catch(erro) {
