@@ -7,7 +7,7 @@ async function status() {
 
 		document.getElementById('server-address').innerText = data.host;
 		
-		if(data.online === false || data.name_raw === '§c● Offline') {
+		if(data.online === false || data.software === null) {
 			document.getElementById('server-dot').classList.add('offline');
 		} else {
 			document.getElementById('server-dot').classList.add('online');
@@ -17,5 +17,3 @@ async function status() {
 		console.log('Erro ao buscar dados!:', erro);
 	}
 };
-
-status();
