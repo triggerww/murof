@@ -17,3 +17,5 @@ async function status() {
 		console.log('Erro ao buscar dados!:', erro);
 	}
 };
+
+status();
