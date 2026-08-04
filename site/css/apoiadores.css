@@ -112,7 +112,7 @@ article {
 .cards {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: stretch;
     justify-content: flex-start;
     flex-wrap: wrap;
     width: 100%;
@@ -127,8 +127,6 @@ article {
     padding: 20px;
     transition: all 0.2s ease-out;
     width: calc(33.333% - 14px);
-    min-height: 200px;
-    max-height: 500px;
 }
 
 .content-cards:hover {
