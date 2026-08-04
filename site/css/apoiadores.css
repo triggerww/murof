@@ -36,11 +36,6 @@ body {
     color: var(--font);
     font-size: 17px;
     font-family: Hack, monospace;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    overflow: hidden;
 }
 
 #null {
@@ -104,18 +99,25 @@ nav ul li:hover {
 }
 
 article {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 100vh;
     margin-inline: 5%;
+    margin-top: 8%;
+    margin-bottom: 5%;
+}
+
+.apoiadores {
+    width: 60%;
+    margin-bottom: 2%;
 }
 
 .cards {
     display: flex;
-    flex-direction: column;
-    width: 36%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
     font-size: 1rem;
+    gap: 20px;
 }
 
 .content-cards {
@@ -123,8 +125,9 @@ article {
     border: 1px solid var(--contorno);
     border-radius: 10px;
     padding: 20px;
-    margin-bottom: 5%;
     transition: all 0.2s ease-out;
+    width: calc(33.333% - 14px);
+    height: 200px;
 }
 
 .content-cards:hover {
