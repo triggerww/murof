@@ -127,6 +127,7 @@ article {
     padding: 20px;
     transition: all 0.2s ease-out;
     width: calc(33.333% - 14px);
+    height: 220px;
 }
 
 .content-cards:hover {
