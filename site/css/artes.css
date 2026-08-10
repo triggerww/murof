@@ -36,11 +36,6 @@ body {
     color: var(--font);
     font-size: 17px;
     font-family: Hack, monospace;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    overflow: hidden;
 }
 
 #null {
@@ -60,6 +55,7 @@ body {
     box-sizing: border-box;
     background-color: var(--background);
     border-bottom: 1px solid var(--contorno);
+    z-index: 998;
 }
 
 .logotexto {
@@ -104,18 +100,89 @@ nav ul li:hover {
 }
 
 article {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 100vh;
     margin-inline: 5%;
+    margin-top: 8%;
+    margin-bottom: 5%;
+}
+
+.\30 x4E4D52 {
+    width: 60%;
+    margin-bottom: 2%;
+}
+
+.artistas {
+    width: 60%;
+    margin-block: 2%;
+}
+
+.artes {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+    font-size: 1rem;
+    padding-bottom: 5%;
+    border-bottom: 1px solid var(--contorno);
+}
+
+.content-artes {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    background-color: var(--background);
+    border: 1px solid var(--contorno);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.2s ease-out;
+}
+
+.content-artes img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.content-artes:hover img {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.text-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 16px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0));
+    width: 100%;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.text-overlay h4 {
+    margin: 0;
+    padding: 0;
+}
+
+.text-overlay p {
+    color: white;
+    margin: 0;
 }
 
 .cards {
     display: flex;
-    flex-direction: column;
-    width: 36%;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
     font-size: 1rem;
+    gap: 20px;
 }
 
 .content-cards {
@@ -123,8 +190,9 @@ article {
     border: 1px solid var(--contorno);
     border-radius: 10px;
     padding: 20px;
-    margin-bottom: 5%;
     transition: all 0.2s ease-out;
+    width: calc(33.333% - 14px);
+    height: 220px;
 }
 
 .content-cards:hover {
