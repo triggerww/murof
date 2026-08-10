@@ -127,7 +127,7 @@ article {
 .content-artes {
     position: relative;
     width: 100%;
-    height: 420px;
+    height: 450px;
     background-color: var(--background);
     border: 1px solid var(--contorno);
     border-radius: 10px;
