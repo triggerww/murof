@@ -283,8 +283,9 @@ footer {
         font-size: 1rem;
     }
 
-    .redes-sociais {
-        display: none;
+    .redes-sociais img {
+        width: 35px;
+        height: 35px;
     }
 
     .cards {
