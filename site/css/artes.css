@@ -160,7 +160,7 @@ article {
     color: white;
     text-align: center;
     cursor: pointer;
-    z-index: 999;
+    z-index: 997;
 }
 
 .text-overlay h4 {
@@ -266,6 +266,7 @@ footer {
     align-items: center;
     overflow: hidden;
     background-color: var(--contorno);
+    z-index: 998;
 }
 
 .widget {
