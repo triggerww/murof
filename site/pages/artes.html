@@ -54,7 +54,7 @@
             </header>
             <section class="artes">
                 <div class="content-artes">
-                    <img src="../images/arts/hanna.webp">
+                    <img src="../images/arts/hanna.webp" onclick="openModal(this)">
                     <div class="text-overlay">
                         <h4>Hanna</h4>
                         <p>Lasanha</p>
@@ -62,7 +62,7 @@
                 </div>
 
                 <div class="content-artes">
-                    <img src="../images/arts/the_night.webp">
+                    <img src="../images/arts/the_night.webp" onclick="openModal(this)">
                     <div class="text-overlay">
                         <h4>The Night</h4>
                         <p>Lasanha</p>
@@ -70,7 +70,7 @@
                 </div>
 
                 <div class="content-artes">
-                    <img src="../images/arts/Tubarina.webp">
+                    <img src="../images/arts/Tubarina.webp" onclick="openModal(this)">
                     <div class="text-overlay">
                         <h4>Tubarina</h4>
                         <p>Lasanha</p>
@@ -78,7 +78,7 @@
                 </div>
 
                 <div class="content-artes">
-                    <img src="../images/arts/quadrados.webp">
+                    <img src="../images/arts/quadrados.webp" onclick="openModal(this)">
                     <div class="text-overlay">
                         <h4>Quadrados</h4>
                         <p>Annye</p>
@@ -117,10 +117,16 @@
         </article>
     </main>
 
+    <div id="Modal" class="modal" onclick="closeModal(event)">
+        <span class="close" onclick="closeModal(event)"></span>
+        <img class="modal-content" id="img">
+    </div>
+
     <footer>
         <div class="widget">Os vulcões oferecem um vislumbre do interior da Terra, mostrando poderosas forças geológicas por meio de erupções.</div>
     </footer>
 
-    <script src="../js/server-status.js"></script>
+    <script src="../js/server-status.js" defer></script>
+    <script src="../js/artes.js" defer></script>
 </body>
 </html>

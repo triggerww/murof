@@ -114,7 +114,6 @@ article {
     width: 60%;
     margin-block: 2%;
 }
-
 .artes {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -172,6 +171,41 @@ article {
 .text-overlay p {
     color: white;
     margin: 0;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 999;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    position: relative;
+    max-width: 80%;
+    max-height: 80%;
+    transform: scale(0.7);
+    transition: transform 0.5s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal.show {
+    opacity: 1;
+}
+
+.modal-content.show {
+    transform: scale(1);
 }
 
 .cards {
